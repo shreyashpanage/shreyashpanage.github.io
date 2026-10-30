@@ -739,6 +739,98 @@ h2 em {
   font-size: 0.8rem;
 }
 
+.certifications-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2.6rem;
+}
+
+.certifications h2 {
+  margin-block: 1.25rem 0;
+  font-size: clamp(3rem, 5vw, 4.6rem);
+  font-weight: 500;
+  letter-spacing: -0.065em;
+  line-height: 0.98;
+}
+
+.certifications-heading > .text-link {
+  margin-bottom: 0.45rem;
+}
+
+.certification-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--line);
+}
+
+.certification-card {
+  display: flex;
+  min-width: 0;
+  min-height: 174px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.1rem;
+  padding: 1.25rem 1.25rem 1.25rem 0;
+  border-bottom: 1px solid var(--line);
+  transition: background 180ms ease, padding 180ms ease;
+}
+
+.certification-card:nth-child(even) {
+  padding-right: 0;
+  padding-left: 1.25rem;
+  border-left: 1px solid var(--line);
+}
+
+.certification-card:hover {
+  background: rgb(220 229 216 / 25%);
+}
+
+.certification-meta {
+  display: flex;
+  width: 100%;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  color: var(--muted);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.certification-meta span:last-child {
+  text-align: right;
+}
+
+.certification-card h3 {
+  align-self: stretch;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.55rem;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.12;
+}
+
+.certification-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--rust);
+  font-size: 0.67rem;
+  font-weight: 600;
+}
+
+.certification-link span {
+  transition: transform 180ms ease;
+}
+
+.certification-card:hover .certification-link span {
+  transform: translate(2px, -2px);
+}
+
 .contact {
   display: grid;
   grid-template-columns: 1fr 0.78fr;
@@ -956,6 +1048,14 @@ h2 em {
   .contact {
     grid-template-columns: 1fr 0.85fr;
     gap: 2rem;
+  }
+
+  .certification-card {
+    min-height: 190px;
+  }
+
+  .certification-meta {
+    flex-wrap: wrap;
   }
 
   .site-footer {
@@ -1195,6 +1295,39 @@ h2 em {
 
   .project-card {
     min-height: 220px;
+  }
+
+  .certifications-heading {
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+
+  .certifications h2 {
+    font-size: clamp(3rem, 13vw, 4.2rem);
+  }
+
+  .certifications-heading > .text-link {
+    margin-top: 1rem;
+  }
+
+  .certification-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .certification-card,
+  .certification-card:nth-child(even) {
+    min-height: 155px;
+    padding: 1.1rem 0;
+    border-left: 0;
+  }
+
+  .certification-meta {
+    flex-wrap: nowrap;
+    font-size: 0.53rem;
+  }
+
+  .certification-card h3 {
+    font-size: 1.4rem;
   }
 
   .contact {
