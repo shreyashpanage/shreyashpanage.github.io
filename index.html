@@ -20,7 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=3" />
+    <link rel="stylesheet" href="styles.css?v=4" />
     <script src="script.js?v=3" defer></script>
   </head>
   <body>
@@ -384,22 +384,48 @@
           <div class="form-heading">
             <h3>Questions &amp; comments</h3>
             <p class="form-notice">Leave your name and email so I can reply. Your message is sent privately; please don’t include sensitive information.</p>
-            <a
-              class="form-email-link"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdZeUsaR4Vr_2VZCP6LGVzLdLCHeyHQYv_zIfXSYs-ix6OSOA/viewform"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Open the form in a new tab <span aria-hidden="true">↗</span>
-            </a>
           </div>
-          <iframe
-            class="google-form-embed"
-            title="Contact Shreyash Panage using Google Forms"
-            src="https://docs.google.com/forms/d/e/1FAIpQLSdZeUsaR4Vr_2VZCP6LGVzLdLCHeyHQYv_zIfXSYs-ix6OSOA/viewform?embedded=true"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-          ></iframe>
+          <form
+            class="contact-form"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSdZeUsaR4Vr_2VZCP6LGVzLdLCHeyHQYv_zIfXSYs-ix6OSOA/formResponse"
+            method="post"
+            target="_blank"
+          >
+            <input type="hidden" name="fvv" value="1" />
+            <input type="hidden" name="pageHistory" value="0" />
+            <label class="form-field">
+              <span>Your name <span aria-hidden="true">*</span></span>
+              <input
+                type="text"
+                name="entry.850235200"
+                autocomplete="name"
+                maxlength="200"
+                required
+              />
+            </label>
+            <label class="form-field">
+              <span>Email address <span aria-hidden="true">*</span></span>
+              <input
+                type="email"
+                name="entry.483706021"
+                autocomplete="email"
+                maxlength="254"
+                required
+              />
+            </label>
+            <label class="form-field">
+              <span>Question or comment</span>
+              <textarea
+                name="entry.2124504022"
+                rows="4"
+                maxlength="5000"
+              ></textarea>
+            </label>
+            <button class="button button-dark form-submit" type="submit">
+              Send message <span aria-hidden="true">↗</span>
+            </button>
+            <p class="form-submit-note">A Google Forms confirmation opens in a new tab.</p>
+          </form>
           <a class="form-email-link direct-email-link" href="mailto:shreyashpanage00@gmail.com">Prefer email? Contact me directly <span aria-hidden="true">↗</span></a>
         </div>
       </section>
